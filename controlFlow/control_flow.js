@@ -51,3 +51,25 @@ let authenticationStatus = isAuthenticated ? "Authenticated" : "Not authenticate
 
 console.log("Authentication Status:", authenticationStatus);
 
+// Task: user roles validation to provide diets in Dietary Services
+let user = "employee";
+let message;
+
+switch (user) {
+    case "employee":
+        message = "Authorized to have access to 'Dietary Services'";
+        break;
+    case "enrolled member":
+        message = "Authorized to have access to 'Dietary Services' and one-on-one interaction with a dietician";
+        break;
+    case "subscriber":
+        message = "Authorized to have partial access to facilitate 'Dietary Services' only";
+        break;
+    case "non-subscriber":
+        message = "Please enroll or at least subscribe first to avail this facilit";
+        break;
+    default:
+        message = "Unkown";
+    }
+
+    console.log("User:", message);
